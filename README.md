@@ -2,10 +2,10 @@ Week 01
 =======
 
 This repository contains files for:
-0. replicating lecture examples
-0. lab exercises
-0. lab exercise solutions
-0. python scripts (optional)
+0. replicating lecture examples.
+0. lab exercises.
+0. lab exercise solutions.
+0. python scripts (optional).
 
 About SOC 4650/5650
 -------------------
