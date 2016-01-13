@@ -1,13 +1,13 @@
 // ==========================================================================
 
-// {insert general title}
+// SOC 4650/5650 - LECTURE 01
 
 // ==========================================================================
 
 // standard opening options
 
 version 14
-capture log close
+log close _all
 graph drop _all
 clear all
 set more off
@@ -18,51 +18,39 @@ set linesize 80
 // change directory
 
 if "`c(os)'" == "MacOSX" {
-	cd "/Users/`c(username)'/Documents/Working"
+	cd "/Users/`c(username)'/Documents"
 }
 
 else if "`c(os)'" == "Windows" {
-	cd "C:\Users\`c(username)'\Documents\Working"	
+	cd "C:\Users\`c(username)'\Documents"	
 }
 
-// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-// check to see if source data exists
-
-capture confirm file {data file}
-
-if _rc==601 {
-	display in red "This do-file requires that the source dataset be saved in your working folder."
-	exit
-}
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // check to see if appropriate directories exists
 
-capture mkdir "{primary folder name}"
-cd "{primary folder name}"
-
-capture mkdir "Plots"
+capture mkdir "Intro to GISc - Lecture 01"
+cd "Intro to GISc - Lecture 01"
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 // log process
 
-log using {filename}.txt, text replace
+log using lecture01.txt, text replace
 
 // ==========================================================================
 
 /* 
-file name - 
+file name - lecture01.do
 
-project name -	
+project name -	SOC 4650/5650
                                                                                  
-purpose -
+purpose - lecture 01 replication file
 	                                                                               
-created - 04 Dec 2015
+created - 13 Jan 2016
 
-updated - 04 Dec 2015
+updated - 13 Jan 2016
                                                                                 
 author - CHRIS
 */                                                                              
@@ -71,27 +59,50 @@ author - CHRIS
                                                                                  
 /* 
 full description - 
-
+This file replicates *some* of the Stata steps for Lecture 01. Some steps
+were illustrated using point-and-click and are therefore not included.
 */
 
 /* 
 updates - 
-
+none
 */
 
 // ==========================================================================
 
-/* 
-superordinates  - 
+// open census data file
 
-*/
-
-/* 
-subordinates - 
-
-*/
+sysuse census
 
 // ==========================================================================
+
+// list all variables
+
+describe
+
+// ==========================================================================
+
+// list only some variables
+
+describe state state2 region
+
+// ==========================================================================
+
+// list all observations for certain variables
+
+list state state2
+
+// ==========================================================================
+
+// list only some observations for certain variables
+
+list state state2
+
+// ==========================================================================
+
+// get basic descriptive statistics for a variable
+
+summarize pop
 
 // ==========================================================================
 
