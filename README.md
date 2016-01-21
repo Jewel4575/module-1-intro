@@ -1,10 +1,15 @@
 # Week 01
 
 This repository contains files for:
-- lecture-01 - replicating lecture examples
-- lab-01 - lab exercises
-- lab-solutions-01 - lab exercise solutions
-- python-01 - python scripts (optional)
+- commands-01
+  - describe.pdf - Stata documentation for the `describe` command
+  - summarize.pdf -  Stata documentation for the `summarize` command
+  - sysuse.pdf -  - Stata documentation for the `sysuse` command
+  - week-01-stata-commands.pdf - Course documentation for all commands covered in Week 1
+- lecture-01
+  - lecture01.do - Stata code for replicating lecture examples
+- LICENSE.md
+- README.md
 
 ### About SOC 4650/5650
 This class introduces both the theoretical and technical skills that constitute the nascent field of Geographic Information Science (GISc). The course focuses on social, economic, and health data - all key topics for social science researchers. We also focus on skills needed to work with “big” data - data that are too numerous or complex to be cleaned manually. While the examples may be specific to the social sciences, the theories and skills that are covered are broadly applicable across the social and natural sciences as well as the humanities. 
