@@ -7,12 +7,14 @@ lecture-01 <img src="https://slu-soc5650.github.io/images/logo.png" align="right
 [![](https://img.shields.io/github/repo-size/slu-soc5650/lecture-01.svg)](https://github.com/slu-soc5650/lecture-01)
 
 This repository contains files for:
--   `Lab/` - lab instructions
--   `shawCrime/` - data for week 01
+-   `Exercises/` - Shaw crime, email, and `leaflet` exercises
+-   `Functions/` - `R` functions
 -   `Slides/` - lecture slides
--   `Stata/` - Stata set-up script
 -   `.gitignore`
--   `LICENSE.md`
+-   `LICENSE`
+-   `LICENSE_TEXT.md`
+-   `NEWS_SITE.md`
+-   `NEWS.md`
 -   `README.md`
 
 ### License Information
