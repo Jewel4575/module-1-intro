@@ -1,3 +1,7 @@
+# lecture-01 v18.3.0
+
+* update lecture slides with Brandon's info
+
 # lecture-01 v18.2.0
 
 * Add `NEWS.md`
