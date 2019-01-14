@@ -10,7 +10,7 @@ lecture-01 <img src="https://slu-soc5650.github.io/images/logo.png" align="right
 This lecture assumes the following software is installed and available:
 
 ```r
-install.packages(c("here", "leaflet", "sf", "tidyverse"))
+install.packages(c("here", "leaflet", "sf", "tidyverse", "usethis"))
 ```
 
 ### Access Lecture
