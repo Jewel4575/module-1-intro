@@ -6,25 +6,32 @@ lecture-01 <img src="https://slu-soc5650.github.io/images/logo.png" align="right
 [![](https://img.shields.io/github/last-commit/slu-soc5650/lecture-01.svg)](https://github.com/slu-soc5650/lecture-01/commits/master)
 [![](https://img.shields.io/github/repo-size/slu-soc5650/lecture-01.svg)](https://github.com/slu-soc5650/lecture-01)
 
-This repository contains files for:
--   `Exercises/` - Shaw crime, email, and `leaflet` exercises
--   `Functions/` - `R` functions
--   `Slides/` - lecture slides
--   `.gitignore`
--   `LICENSE`
--   `LICENSE_TEXT.md`
--   `NEWS_SITE.md`
--   `NEWS.md`
--   `README.md`
+### Software Installations
+This lecture assumes the following software is installed and available:
 
-### License Information
-The included code is licensed under a [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html) (see [`LICENSE`](LICENSE)). All exercises (including labs, problem sets, lecture preps, and other activities), documentation files, and lecture slides are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/) (see [`LICENSE_TEXT.md`](LICENSE_TEXT.md)).
+```r
+install.packages(c("leaflet", "sf", "tidyverse"))
+```
 
-### About SOC 4650 & 5650: Introduction to GIS
+### Access Lecture
+Students in my course should clone this repository into their course folder system. Others can quickly download this lecture to their `Desktop` using `usethis`:
+
+```r
+usethis::use_course("https://github.com/slu-soc5650/lecture-01/archive/master.zip")
+```
+
+### Support and Feedback
+Students currently enrolled in this course should seek assistance on Slack and/or during in-person office hours before posting questions or reporting possible bugs. Others should see my general policy on [support](.github/SUPPORT.md). If you have found a typo or have a suggestion, please check the [contribution guidelines](.github/CONTRIBUTING.md) guidelines before opening an issue. Please note that contributions to this project are governed by a [Contributor Code of Conduct](.github/CODE_OF_CONDUCT.md) and, for Saint Louis University community members, our various University policies.
+
+### Additional Materials
+Source `.tex` files for the handouts and assignments for this lecture are available in the [`extras/`](/extras) folder. These are intended for instructors who wish to use course materials with attribution and for my students who are moving on to present and teach about these topics.
+
+## About SOC 4650 & 5650: Introduction to GIS
+### Course Description
 This class introduces both the theoretical and technical skills that constitute the nascent field of Geographic Information Science (GISc). Techniques introduced include data cleaning and management, map production and cartography, and the manipulation of both tabular and spatial data. The impacts of GISc on public policy, and the effects of public policy on GISc, are also discussed. The course incorporates a wide variety of social, economic, health, urban, meteorological, and environmental data. These data are mapped at a variety of extents, from the City of St. Louis to the St. Louis Metropolitan region, Missouri, all United States counties, and all U.S. states. More details are available on the [course website](https://slu-soc5650.github.io).
 
 ### About Christopher Prener, Ph.D.
 Chris is an urban and medical sociologist with an interest in mixed methods research designs that incorporate spatial data. His dissertation examined the effect of neighborhood context and conditions on emergency medical services work, particularly with patients who have mental illnesses or substance use disorders. He is also part of a research team examining the effects of literacy on mental health service use and recovery, and his student research team is documenting the effects of systemic street closures in St. Louis. He is an Assistant Professor in the Department of Sociology and Anthropology at Saint Louis University. More details are available at [his website](https://chris-prener.github.io) and he can be contacted at [chris.prener@slu.edu](mailto:chris.prener@slu.edu).
 
 ### About Saint Louis University <img src="https://slu-soc5650.github.io/images/sluLogo.png" align="right" />
-[Saint Louis University](http://wwww.slu.edu) is a Catholic, Jesuit institution that values academic excellence, life-changing research, compassionate health care, and a strong commitment to faith and service. Founded in 1818, the University fosters the intellectual and character development of more than 13,000 students on two campuses in St. Louis and Madrid, Spain. Building on a legacy of nearly 200 years, Saint Louis University continues to move forward with an unwavering commitment to a higher purpose, a greater good.
+Founded in 1818, [Saint Louis University](http://wwww.slu.edu) is one of the nation’s oldest and most prestigious Catholic institutions. Rooted in Jesuit values and its pioneering history as the first university west of the Mississippi River, SLU offers nearly 13,000 students a rigorous, transformative education of the whole person. At the core of the University’s diverse community of scholars is SLU’s service-focused mission, which challenges and prepares students to make the world a better, more just place.
