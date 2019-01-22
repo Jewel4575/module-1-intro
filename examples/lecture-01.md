@@ -51,8 +51,6 @@ leaflet() %>%
 
 ![](lecture-01_files/figure-gfm/map-morrissey-1.png)<!-- -->
 
-![](img/map1.png)
-
 The `leaflet()` function creates a map widget, and the `addTiles()`
 function adds a basemap to it. By default,
 [OpenStreetMap](https://www.openstreetmap.org) is used for the basemap.

@@ -40,8 +40,6 @@ leaflet() %>%
   addMarkers(lng=-90.237104, lat=38.637547, popup="Morrissey Hall")
 ```
 
-![](img/map1.png)
-
 The `leaflet()` function creates a map widget, and the `addTiles()` function adds a basemap to it. By default, [OpenStreetMap](https://www.openstreetmap.org) is used for the basemap. Finally, we use `addMarkers()` to specify the longitude and latitude of our marker, and we enter in a label that will appear as a pop-up when a user clicks on the marker. `lng`, `lat`, and `popup` are all called "arguments" - these are used to control how a function operates. 
 
 The `%>%` is called the "pipe operator", and it is used to chain together functions in what we will call "pipelines". This pipeline can be read like a list, with the word **then** substituted for each instance of `%>%`:
