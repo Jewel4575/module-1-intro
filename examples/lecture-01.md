@@ -111,17 +111,47 @@ sluPlaces <- read_csv(here("data", "sluPlaces.csv"))
 
 We read the statement from right to left - the data found at
 `data/sluPlaces.csv` is read correctly as `.csv` data, and the resulting
-imported data is stored in an object in our global enviornment named
+imported data is stored in an object in our global environment named
 `sluPlaces`. The `here()` function helps us write simple, operating
 system agnostic file paths that will always be relative to where the
 `.Rproj` file is stored. We’ll talk more about this as the semester
 progresses.
 
+We can explore the data a number of ways, including with the `View()`
+(output not shown) function and the `str()`
+    function:
+
+``` r
+str(sluPlaces)
+```
+
+    ## Classes 'spec_tbl_df', 'tbl_df', 'tbl' and 'data.frame': 6 obs. of  4 variables:
+    ##  $ id  : num  1 2 3 4 5 6
+    ##  $ name: chr  "Morrissey Hall" "Starbucks" "Simon Rec" "Pius Library" ...
+    ##  $ lng : num  -90.2 -90.2 -90.2 -90.2 -90.2 ...
+    ##  $ lat : num  38.6 38.6 38.6 38.6 38.6 ...
+    ##  - attr(*, "spec")=
+    ##   .. cols(
+    ##   ..   id = col_double(),
+    ##   ..   name = col_character(),
+    ##   ..   lng = col_double(),
+    ##   ..   lat = col_double()
+    ##   .. )
+
+If we wanted to use `View()`, it would be implemented like this:
+
+``` r
+View(sluPlaces)
+```
+
+When executed in the console, it will produce a spreadsheet-like view
+within RStudio.
+
 The `.csv` data are *tabular* data - they contain longitude and latitude
 data, but they are not *projected*. This means we are missing the
 geometric data that locates these longitude and latitude data in space.
 leaflet can take these spatial references, however, and convert them to
-useable geometric data. We do so using a very similar process to what we
+usable geometric data. We do so using a very similar process to what we
 did before:
 
 ``` r
