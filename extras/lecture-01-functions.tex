@@ -1,0 +1,112 @@
+\documentclass{tufte-handout}
+
+\usepackage{xcolor}
+
+% set image attributes:
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+
+% set hyperlink attributes
+\hypersetup{colorlinks}
+
+% indent subsections
+\newenvironment{subs}
+  {\adjustwidth{3em}{0pt}}
+  {\endadjustwidth}
+
+
+% ============================================================
+
+% define the title
+\title{SOC 4650/5650: Lecture 01 Functions}
+\author{Christopher Prener, Ph.D.}
+\date{Spring 2019}
+% ============================================================
+\begin{document}
+% ============================================================
+\maketitle % generates the title
+% ============================================================
+
+\vspace{5mm}
+\section{Packages}
+\begin{itemize}
+\item \texttt{base}\sidenote{Will already be installed.}
+\item \texttt{here}
+\item \texttt{leaflet}
+\item \texttt{magrittr}\sidenote{Installed automatically by \texttt{tidyverse}.}
+\item \texttt{readr}\sidenote{Installed automatically by \texttt{tidyverse}.}
+\item \texttt{sf}
+\item \texttt{utils}\sidenote{Will already be installed.}
+\end{itemize}
+
+\vspace{2mm}
+\section{Working with Packages}
+\begin{subs}
+\subsection{Installing Packages from CRAN}
+\texttt{utils::}{\color{red}\texttt{install.package}}\texttt{("\textit{packageName}")}
+
+\vspace{3mm}
+\subsection{Updating Packages}
+\texttt{utils::}{\color{red}\texttt{update.packages}}\texttt{()}
+
+\vspace{3mm}
+\subsection{Loading Packages}
+\texttt{base::}{\color{red}\texttt{library}}\texttt{("\textit{packageName}")}
+
+\end{subs}
+
+\vspace{2mm}
+\section{Reading Data}
+\begin{subs}
+\subsection{Reading Tabular Data}
+\texttt{readr::}{\color{red}\texttt{read\_csv}}\texttt{(\textit{filepath})}
+
+\vspace{3mm}
+\subsection{Reading Tabular Data}
+\texttt{sf::}{\color{red}\texttt{st\_read}}\texttt{(\textit{filepath}, stringsAsFactors = FALSE)}
+\end{subs}
+
+\vspace{5mm}
+\section{Assign Data to Object}
+\texttt{\textit{dataFrame}} {\color{red}\texttt{<-}} \texttt{\textit{dataSource}}
+
+\vspace{5mm}
+\section{Opening Spreadsheet View}
+\texttt{utils::}{\color{red}\texttt{View}}\texttt{(\textit{dataFrame})}
+
+\vspace{5mm}
+\section{View Structure of Object}
+\texttt{utils::}{\color{red}\texttt{str}}\texttt{(\textit{dataFrame})}
+
+\vspace{5mm}
+\section{Pipe Operator}
+\texttt{\%>\%}
+
+\vspace{5mm}
+\section{\texttt{leaflet}}
+\begin{subs}
+\subsection{Create Map}
+\texttt{leaflet::}{\color{red}\texttt{leaflet}}\texttt{(data = \textit{dataFrame})}\sidenote{The \texttt{data} argument is optional.}
+
+\vspace{3mm}
+\subsection{Add Open Street Map Base}
+\texttt{leaflet::}{\color{red}\texttt{addTiles}}\texttt{()}
+
+\vspace{3mm}
+\subsection{Add Other Basemap}
+\texttt{leaflet::}{\color{red}\texttt{addProviderTiles}}\texttt{(providers\$\textit{basemapName})}
+
+\vspace{3mm}
+\subsection{Add Single Marker}
+\texttt{leaflet::}{\color{red}\texttt{addMarkers}}\texttt{(lng = \textit{longitudeValue}, lat = \textit{latitudeValue},}
+\par \texttt{popup = "\textit{popup text}")}
+
+\vspace{3mm}
+\subsection{Add Markers from Data}
+\texttt{leaflet::}{\color{red}\texttt{addMarkers}}\texttt{(lng = \textasciitilde\textit{longitudeVar}, lat = \textasciitilde\textit{latitudeVar},}
+\par \texttt{popup = \textasciitilde\textit{textVar})}
+
+\end{subs}
+
+% ============================================================
+\end{document}
