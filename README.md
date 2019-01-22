@@ -1,7 +1,7 @@
 lecture-02 <img src="https://slu-soc5650.github.io/images/logo.png" align="right" />
 ===========================================================
 [![](https://img.shields.io/badge/semester-spring%202019-blue.svg)](https://github.com/slu-soc5650/lecture-02)
-[![](https://img.shields.io/badge/release-lecture-green.svg)](https://github.com/slu-soc5650/lecture-02)
+[![](https://img.shields.io/badge/release-full-brightgreen.svg)](https://github.com/slu-soc5650/lecture-02)
 [![](https://img.shields.io/github/release/slu-soc5650/lecture-02.svg?label=version)](https://github.com/slu-soc5650/lecture-01/releases)
 [![](https://img.shields.io/github/last-commit/slu-soc5650/lecture-02.svg)](https://github.com/slu-soc5650/lecture-01/commits/master)
 [![](https://img.shields.io/github/repo-size/slu-soc5650/lecture-02.svg)](https://github.com/slu-soc5650/lecture-02)
