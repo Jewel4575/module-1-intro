@@ -1,3 +1,7 @@
+# lecture-01 v19.1.0.9000
+
+* update handouts and source
+
 # lecture-01 v18.3.0
 
 * update lecture slides with Brandon's info

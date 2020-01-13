@@ -1,4 +1,4 @@
-lecture-02 <img src="https://slu-soc5650.github.io/images/logo.png" align="right" />
+lecture-01 <img src="https://slu-soc5650.github.io/images/logo.png" align="right" />
 ===========================================================
 [![](https://img.shields.io/badge/semester-spring%202019-blue.svg)](https://github.com/slu-soc5650/lecture-02)
 [![](https://img.shields.io/badge/release-full-brightgreen.svg)](https://github.com/slu-soc5650/lecture-02)
