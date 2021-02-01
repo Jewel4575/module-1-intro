@@ -1,4 +1,8 @@
-# lecture-01 v19.1.0.9000
+# lecture-01 v20.1
+
+* update materials for remote teaching
+
+# lecture-01 v19.1.0
 
 * update handouts and source
 

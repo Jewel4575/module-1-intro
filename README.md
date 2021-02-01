@@ -1,16 +1,30 @@
-lecture-01 <img src="https://slu-soc5650.github.io/images/logo.png" align="right" />
+module-1-intro <img src="icon_hu137d436a85c84cab921c9c47edaed5ef_12382_192x192_fill_lanczos_center_2.png" align="right" />
 ===========================================================
-[![](https://img.shields.io/badge/semester-spring%202019-blue.svg)](https://github.com/slu-soc5650/lecture-02)
-[![](https://img.shields.io/badge/release-full-brightgreen.svg)](https://github.com/slu-soc5650/lecture-02)
-[![](https://img.shields.io/github/release/slu-soc5650/lecture-02.svg?label=version)](https://github.com/slu-soc5650/lecture-01/releases)
-[![](https://img.shields.io/github/last-commit/slu-soc5650/lecture-02.svg)](https://github.com/slu-soc5650/lecture-01/commits/master)
-[![](https://img.shields.io/github/repo-size/slu-soc5650/lecture-02.svg)](https://github.com/slu-soc5650/lecture-02)
+[![](https://img.shields.io/badge/semester-spring%2021-blue.svg)](https://github.com/slu-soc5650/module-1-intro)
+[![](https://img.shields.io/badge/release-full-brightgreen.svg)](https://github.com/slu-soc5650/module-1-intro)
+[![](https://img.shields.io/github/release/slu-soc5650/module-1-intro.svg?label=version)](https://github.com/slu-soc5650/lecture-01/releases)
+[![](https://img.shields.io/github/last-commit/slu-soc5650/module-1-intro.svg)](https://github.com/slu-soc5650/module-1-intro/commits/master)
+[![](https://img.shields.io/github/repo-size/slu-soc5650/module-1-intro.svg)](https://github.com/slu-soc5650/module-1-intro)
 
-### Support and Feedback
-Students currently enrolled in this course should seek assistance on Slack and/or during in-person office hours before posting questions or reporting possible bugs. Others should see my general policy on [support](.github/SUPPORT.md). If you have found a typo or have a suggestion, please check the [contribution guidelines](.github/CONTRIBUTING.md) guidelines before opening an issue. Please note that contributions to this project are governed by a [Contributor Code of Conduct](.github/CODE_OF_CONDUCT.md) and, for Saint Louis University community members, our various University policies.
+## Module 1 - Course Introduction
+These materials correspond to the opening lecture of SOC 4650 and SOC 5650.
 
-### Additional Materials
-Source `.tex` files for the handouts and assignments for this lecture are available in the [`extras/`](/extras) folder. These are intended for instructors who wish to use course materials with attribution and for my students who are moving on to present and teach about these topics.
+## Lesson Quick Start
+### Install Software
+Make sure you've installed all of the packages listed [here](https://slu-soc5650.github.io/docs/start_prep/#r-packages). In addition, we'll discuss a little more about `R` packages and practice installing another package, `usethis`:
+
+```r
+install.packages("usethis")
+```
+
+### Access Lesson
+You can download this lesson to your Desktop easily using `usethis`:
+
+```r
+usethis::use_course("https://github.com/slu-dss/gis-1/archive/master.zip")
+```
+
+By using `usethis::use_course`, all of the lesson materials will be downloaded to your computer, automatically extracted, and saved to your desktop. You can then open the `.Rproj` file to get started.
 
 ## About SOC 4650 & 5650: Introduction to GIS
 ### Course Description
@@ -19,5 +33,5 @@ This class introduces both the theoretical and technical skills that constitute 
 ### About Christopher Prener, Ph.D.
 Chris is an urban and medical sociologist with an interest in mixed methods research designs that incorporate spatial data. His dissertation examined the effect of neighborhood context and conditions on emergency medical services work, particularly with patients who have mental illnesses or substance use disorders. He is also part of a research team examining the effects of literacy on mental health service use and recovery, and his student research team is documenting the effects of systemic street closures in St. Louis. He is an Assistant Professor in the Department of Sociology and Anthropology at Saint Louis University. More details are available at [his website](https://chris-prener.github.io) and he can be contacted at [chris.prener@slu.edu](mailto:chris.prener@slu.edu).
 
-### About Saint Louis University <img src="https://slu-soc5650.github.io/images/sluLogo.png" align="right" />
+### About Saint Louis University
 Founded in 1818, [Saint Louis University](http://wwww.slu.edu) is one of the nation’s oldest and most prestigious Catholic institutions. Rooted in Jesuit values and its pioneering history as the first university west of the Mississippi River, SLU offers nearly 13,000 students a rigorous, transformative education of the whole person. At the core of the University’s diverse community of scholars is SLU’s service-focused mission, which challenges and prepares students to make the world a better, more just place.
