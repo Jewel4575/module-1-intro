@@ -21,7 +21,7 @@ install.packages("usethis")
 You can download this lesson to your Desktop easily using `usethis`:
 
 ```r
-usethis::use_course("https://github.com/slu-dss/gis-1/archive/master.zip")
+usethis::use_course("https://github.com/slu-soc5650/module-1-intro/archive/master.zip")
 ```
 
 By using `usethis::use_course`, all of the lesson materials will be downloaded to your computer, automatically extracted, and saved to your desktop. You can then open the `.Rproj` file to get started.
