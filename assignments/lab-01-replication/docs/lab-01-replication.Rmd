@@ -32,7 +32,7 @@ library(here)         # file path management
 ```
 
 ## Load Data
-< add your narrative text here >
+We'll start by loading the grocery store data from our `data` folder. 
 
 ```{r, load-data}
 # Food Retail in St. Louis
@@ -40,7 +40,7 @@ grocery <- st_read(here("data", "STL_FOOD_Grocery.geojson"))
 ```
 
 ## Map Grocery Stores
-< add your narrative text here >
+We're going to map our grocery store data with a custom provided basemap, and popups.
 
 ```{r, map-stores}
 leaflet(data = grocery) %>%

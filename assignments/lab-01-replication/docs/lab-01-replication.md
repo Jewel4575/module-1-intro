@@ -1,7 +1,7 @@
 Lab-01 Replication File
 ================
 Christopher Prener, Ph.D.
-(February 01, 2021)
+(February 04, 2021)
 
 ## Introduction
 
@@ -46,7 +46,7 @@ library(here)         # file path management
 
 ## Load Data
 
-&lt; add your narrative text here &gt;
+We’ll start by loading the grocery store data from our `data` folder.
 
 ``` r
 # Food Retail in St. Louis
@@ -62,7 +62,8 @@ grocery <- st_read(here("data", "STL_FOOD_Grocery.geojson"))
 
 ## Map Grocery Stores
 
-&lt; add your narrative text here &gt;
+We’re going to map our grocery store data with a custom provided
+basemap, and popups.
 
 ``` r
 leaflet(data = grocery) %>%

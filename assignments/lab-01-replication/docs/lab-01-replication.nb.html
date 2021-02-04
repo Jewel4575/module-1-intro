@@ -234,7 +234,7 @@ summary {
 
 <h1 class="title toc-ignore">Lab-01 Replication File</h1>
 <h4 class="author">Christopher Prener, Ph.D.</h4>
-<h4 class="date">(February 01, 2021)</h4>
+<h4 class="date">(February 04, 2021)</h4>
 
 </div>
 
@@ -253,44 +253,80 @@ summary {
 <p>This notebook requires the following packages:</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyB0aWR5dmVyc2UgcGFja2FnZXNcbmxpYnJhcnkobWFncml0dHIpICAgICAjIHBpcGUgb3BlcmF0b3JcbmxpYnJhcnkocmVhZHIpICAgICAgICAjIGNzdiB0b29sc1xuXG4jIG1hcHBpbmcgcGFja2FnZXNcbmxpYnJhcnkobWFwdmlldykgICAgICAjIHByZXZpZXcgc3BhdGlhbCBkYXRhXG5gYGAifQ== -->
-<pre class="r"><code># tidyverse packages
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyB0aWR5dmVyc2UgcGFja2FnZXNcbmxpYnJhcnkobWFncml0dHIpICAgICAjIHBpcGUgb3BlcmF0b3JcbmxpYnJhcnkocmVhZHIpICAgICAgICAjIGNzdiB0b29sc1xuXG4jIG1hcHBpbmcgcGFja2FnZXNcbmxpYnJhcnkobWFwdmlldykgICAgICAjIHByZXZpZXcgc3BhdGlhbCBkYXRhXG5gYGBcbmBgYCJ9 -->
+<pre class="r"><code>```r
+# tidyverse packages
 library(magrittr)     # pipe operator
 library(readr)        # csv tools
 
 # mapping packages
 library(mapview)      # preview spatial data</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiUmVnaXN0ZXJlZCBTMyBtZXRob2Qgb3ZlcndyaXR0ZW4gYnkgJ2h0bWx3aWRnZXRzJzpcbiAgbWV0aG9kICAgICAgICAgICBmcm9tICAgICAgICAgXG4gIHByaW50Lmh0bWx3aWRnZXQgdG9vbHM6cnN0dWRpb1xuR0RBTCB2ZXJzaW9uID49IDMuMS4wIHwgc2V0dGluZyBtYXB2aWV3T3B0aW9ucyhmZ2IgPSBUUlVFKVxuIn0= -->
-<pre><code>Registered S3 method overwritten by &#39;htmlwidgets&#39;:
-  method           from         
-  print.htmlwidget tools:rstudio
-GDAL version &gt;= 3.1.0 | setting mapviewOptions(fgb = TRUE)</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShsZWFmbGV0KSAgICAgICMgaW50ZXJhY3RpdmUgbWFwc1xubGlicmFyeShzZikgICAgICAgICAgICMgc3BhdGlhbCB0b29sc1xuYGBgIn0= -->
-<pre class="r"><code>library(leaflet)      # interactive maps
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-output-begin eyJkYXRhIjoiUmVnaXN0ZXJlZCBTMyBtZXRob2Qgb3ZlcndyaXR0ZW4gYnkgJ2h0bWx3aWRnZXRzJzpcbiAgbWV0aG9kICAgICAgICAgICBmcm9tICAgICAgICAgXG4gIHByaW50Lmh0bWx3aWRnZXQgdG9vbHM6cnN0dWRpb1xuR0RBTCB2ZXJzaW9uID49IDMuMS4wIHwgc2V0dGluZyBtYXB2aWV3T3B0aW9ucyhmZ2IgPSBUUlVFKVxuIn0= --&gt;
+</code></pre>
+<p>Registered S3 method overwritten by ‘htmlwidgets’: method from<br />
+print.htmlwidget tools:rstudio GDAL version &gt;= 3.1.0 | setting mapviewOptions(fgb = TRUE)</p>
+<pre><code>
+
+
+&lt;!-- rnb-output-end --&gt;
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxubGlicmFyeShsZWFmbGV0KSAgICAgICMgaW50ZXJhY3RpdmUgbWFwc1xubGlicmFyeShzZikgICAgICAgICAgICMgc3BhdGlhbCB0b29sc1xuYGBgXG5gYGAifQ== --&gt;
+
+```r
+```r
+library(leaflet)      # interactive maps
 library(sf)           # spatial tools</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiTGlua2luZyB0byBHRU9TIDMuOC4xLCBHREFMIDMuMS40LCBQUk9KIDYuMy4xXG4ifQ== -->
-<pre><code>Linking to GEOS 3.8.1, GDAL 3.1.4, PROJ 6.3.1</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBvdGhlciBwYWNrYWdlc1xubGlicmFyeShoZXJlKSAgICAgICAgICMgZmlsZSBwYXRoIG1hbmFnZW1lbnRcbmBgYCJ9 -->
-<pre class="r"><code># other packages
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-output-begin eyJkYXRhIjoiTGlua2luZyB0byBHRU9TIDMuOC4xLCBHREFMIDMuMS40LCBQUk9KIDYuMy4xXG4ifQ== --&gt;
+</code></pre>
+<p>Linking to GEOS 3.8.1, GDAL 3.1.4, PROJ 6.3.1</p>
+<pre><code>
+
+
+&lt;!-- rnb-output-end --&gt;
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYGBgclxuIyBvdGhlciBwYWNrYWdlc1xubGlicmFyeShoZXJlKSAgICAgICAgICMgZmlsZSBwYXRoIG1hbmFnZW1lbnRcbmBgYFxuYGBgIn0= --&gt;
+
+```r
+```r
+# other packages
 library(here)         # file path management</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiaGVyZSgpIHN0YXJ0cyBhdCAvVXNlcnMvY2hyaXMvR2l0SHViL3NsdS1zb2M1NjUwL21vZHVsZS0xLWludHJvL2Fzc2lnbm1lbnRzL2xhYi0wMS1yZXBsaWNhdGlvblxuIn0= -->
-<pre><code>here() starts at /Users/chris/GitHub/slu-soc5650/module-1-intro/assignments/lab-01-replication</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-</div>
-<div id="load-data" class="section level2">
-<h2>Load Data</h2>
-<p>&lt; add your narrative text here &gt;</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBGb29kIFJldGFpbCBpbiBTdC4gTG91aXNcbmdyb2NlcnkgPC0gc3RfcmVhZChoZXJlKFwiZGF0YVwiLCBcIlNUTF9GT09EX0dyb2NlcnkuZ2VvanNvblwiKSkgXG5gYGAifQ== -->
-<pre class="r"><code># Food Retail in St. Louis
+<pre><code>
+&lt;!-- rnb-source-end --&gt;
+
+&lt;!-- rnb-output-begin eyJkYXRhIjoiaGVyZSgpIHN0YXJ0cyBhdCAvVXNlcnMvY2hyaXMvR2l0SHViL3NsdS1zb2M1NjUwL21vZHVsZS0xLWludHJvL2Fzc2lnbm1lbnRzL2xhYi0wMS1yZXBsaWNhdGlvblxuIn0= --&gt;
+</code></pre>
+<p>here() starts at /Users/chris/GitHub/slu-soc5650/module-1-intro/assignments/lab-01-replication</p>
+<pre><code>
+
+
+&lt;!-- rnb-output-end --&gt;
+
+&lt;!-- rnb-chunk-end --&gt;
+
+
+&lt;!-- rnb-text-begin --&gt;
+
+
+## Load Data
+We&#39;ll start by loading the grocery store data from our `data` folder. 
+
+
+&lt;!-- rnb-text-end --&gt;
+
+
+&lt;!-- rnb-chunk-begin --&gt;
+
+
+&lt;!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBGb29kIFJldGFpbCBpbiBTdC4gTG91aXNcbmdyb2NlcnkgPC0gc3RfcmVhZChoZXJlKFwiZGF0YVwiLCBcIlNUTF9GT09EX0dyb2NlcnkuZ2VvanNvblwiKSkgXG5gYGAifQ== --&gt;
+
+```r
+# Food Retail in St. Louis
 grocery &lt;- st_read(here(&quot;data&quot;, &quot;STL_FOOD_Grocery.geojson&quot;)) </code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
@@ -298,7 +334,7 @@ grocery &lt;- st_read(here(&quot;data&quot;, &quot;STL_FOOD_Grocery.geojson&quot
 </div>
 <div id="map-grocery-stores" class="section level2">
 <h2>Map Grocery Stores</h2>
-<p>&lt; add your narrative text here &gt;</p>
+<p>We’re going to map our grocery store data with a custom provided basemap, and popups.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGVhZmxldChkYXRhID0gZ3JvY2VyeSkgJT4lXG4gIGFkZFByb3ZpZGVyVGlsZXMocHJvdmlkZXJzJENhcnRvREIuUG9zaXRyb24pICU+JVxuICBhZGRNYXJrZXJzKHBvcHVwID0gfnRpdGxlKVxuYGBgIn0= -->
@@ -311,7 +347,7 @@ grocery &lt;- st_read(here(&quot;data&quot;, &quot;STL_FOOD_Grocery.geojson&quot
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiLTAxIFJlcGxpY2F0aW9uIEZpbGUiCmF1dGhvcjogIkNocmlzdG9waGVyIFByZW5lciwgUGguRC4iCmRhdGU6ICcoYHIgZm9ybWF0KFN5cy50aW1lKCksICIlQiAlZCwgJVkiKWApJwpvdXRwdXQ6IAogIGdpdGh1Yl9kb2N1bWVudDogZGVmYXVsdAogIGh0bWxfbm90ZWJvb2s6IGRlZmF1bHQgCmFsd2F5c19hbGxvd19odG1sOiB5ZXMKLS0tCgojIyBJbnRyb2R1Y3Rpb24KVGhpcyBub3RlYm9vayBwcm92aWRlcyBhIHN0cnVjdHVyZSBmb3IgY29tcGxldGluZyB0aGUgZmlyc3QgbGFiLgoKIyMgSW5zdHJ1Y3Rpb25zClVzaW5nIHRoaXMgbm90ZWJvb2ssIGxvYWQgdGhlIGZpbGUgYGRhdGEvU1RMX0ZPT0RfR3JvY2VyeS5nZW9qc29uYCBpbnRvIGBSYC4gVGhlbiwgY3JlYXRlIGEgYGxlYWZsZXRgIG1hcCBvZiB5b3VyIG93biBkZXNpZ24gdGhhdCBhbHNvIGhhcyBhIHBvcHVwIHByb3ZpZGluZyB0aGUgbmFtZSBvZiB0aGUgZ3JvY2VyeSBzdG9yZS4gKk5vdGUgdGhhdCBJJ3ZlIGdpdmVuIHlvdSB0aGUgc3RydWN0dXJlIGFuZCBwYWNrYWdlcyBmb3IgdGhpcyB3ZWVrIC0gaW4gZnV0dXJlIHdlZWtzIC0geW91J2xsIG5lZWQgdG8gZmlndXJlIHRoaXMgYml0IG91dCBhcyBwYXJ0IG9mIHRoZSBhc3NpZ25tZW50ISoKCiMjIERlcGVuZGVuY2llcwpUaGlzIG5vdGVib29rIHJlcXVpcmVzIHRoZSBmb2xsb3dpbmcgcGFja2FnZXM6CgpgYGB7ciBsb2FkLXBhY2thZ2VzfQojIHRpZHl2ZXJzZSBwYWNrYWdlcwpsaWJyYXJ5KG1hZ3JpdHRyKSAgICAgIyBwaXBlIG9wZXJhdG9yCmxpYnJhcnkocmVhZHIpICAgICAgICAjIGNzdiB0b29scwoKIyBtYXBwaW5nIHBhY2thZ2VzCmxpYnJhcnkobWFwdmlldykgICAgICAjIHByZXZpZXcgc3BhdGlhbCBkYXRhCmxpYnJhcnkobGVhZmxldCkgICAgICAjIGludGVyYWN0aXZlIG1hcHMKbGlicmFyeShzZikgICAgICAgICAgICMgc3BhdGlhbCB0b29scwoKIyBvdGhlciBwYWNrYWdlcwpsaWJyYXJ5KGhlcmUpICAgICAgICAgIyBmaWxlIHBhdGggbWFuYWdlbWVudApgYGAKCiMjIExvYWQgRGF0YQo8IGFkZCB5b3VyIG5hcnJhdGl2ZSB0ZXh0IGhlcmUgPgoKYGBge3IsIGxvYWQtZGF0YX0KIyBGb29kIFJldGFpbCBpbiBTdC4gTG91aXMKZ3JvY2VyeSA8LSBzdF9yZWFkKGhlcmUoImRhdGEiLCAiU1RMX0ZPT0RfR3JvY2VyeS5nZW9qc29uIikpIApgYGAKCiMjIE1hcCBHcm9jZXJ5IFN0b3Jlcwo8IGFkZCB5b3VyIG5hcnJhdGl2ZSB0ZXh0IGhlcmUgPgoKYGBge3IsIG1hcC1zdG9yZXN9CmxlYWZsZXQoZGF0YSA9IGdyb2NlcnkpICU+JQogIGFkZFByb3ZpZGVyVGlsZXMocHJvdmlkZXJzJENhcnRvREIuUG9zaXRyb24pICU+JQogIGFkZE1hcmtlcnMocG9wdXAgPSB+dGl0bGUpCmBgYAoK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiLTAxIFJlcGxpY2F0aW9uIEZpbGUiCmF1dGhvcjogIkNocmlzdG9waGVyIFByZW5lciwgUGguRC4iCmRhdGU6ICcoYHIgZm9ybWF0KFN5cy50aW1lKCksICIlQiAlZCwgJVkiKWApJwpvdXRwdXQ6IAogIGdpdGh1Yl9kb2N1bWVudDogZGVmYXVsdAogIGh0bWxfbm90ZWJvb2s6IGRlZmF1bHQgCmFsd2F5c19hbGxvd19odG1sOiB5ZXMKLS0tCgojIyBJbnRyb2R1Y3Rpb24KVGhpcyBub3RlYm9vayBwcm92aWRlcyBhIHN0cnVjdHVyZSBmb3IgY29tcGxldGluZyB0aGUgZmlyc3QgbGFiLgoKIyMgSW5zdHJ1Y3Rpb25zClVzaW5nIHRoaXMgbm90ZWJvb2ssIGxvYWQgdGhlIGZpbGUgYGRhdGEvU1RMX0ZPT0RfR3JvY2VyeS5nZW9qc29uYCBpbnRvIGBSYC4gVGhlbiwgY3JlYXRlIGEgYGxlYWZsZXRgIG1hcCBvZiB5b3VyIG93biBkZXNpZ24gdGhhdCBhbHNvIGhhcyBhIHBvcHVwIHByb3ZpZGluZyB0aGUgbmFtZSBvZiB0aGUgZ3JvY2VyeSBzdG9yZS4gKk5vdGUgdGhhdCBJJ3ZlIGdpdmVuIHlvdSB0aGUgc3RydWN0dXJlIGFuZCBwYWNrYWdlcyBmb3IgdGhpcyB3ZWVrIC0gaW4gZnV0dXJlIHdlZWtzIC0geW91J2xsIG5lZWQgdG8gZmlndXJlIHRoaXMgYml0IG91dCBhcyBwYXJ0IG9mIHRoZSBhc3NpZ25tZW50ISoKCiMjIERlcGVuZGVuY2llcwpUaGlzIG5vdGVib29rIHJlcXVpcmVzIHRoZSBmb2xsb3dpbmcgcGFja2FnZXM6CgpgYGB7ciBsb2FkLXBhY2thZ2VzfQojIHRpZHl2ZXJzZSBwYWNrYWdlcwpsaWJyYXJ5KG1hZ3JpdHRyKSAgICAgIyBwaXBlIG9wZXJhdG9yCmxpYnJhcnkocmVhZHIpICAgICAgICAjIGNzdiB0b29scwoKIyBtYXBwaW5nIHBhY2thZ2VzCmxpYnJhcnkobWFwdmlldykgICAgICAjIHByZXZpZXcgc3BhdGlhbCBkYXRhCmxpYnJhcnkobGVhZmxldCkgICAgICAjIGludGVyYWN0aXZlIG1hcHMKbGlicmFyeShzZikgICAgICAgICAgICMgc3BhdGlhbCB0b29scwoKIyBvdGhlciBwYWNrYWdlcwpsaWJyYXJ5KGhlcmUpICAgICAgICAgIyBmaWxlIHBhdGggbWFuYWdlbWVudApgYGAKCiMjIExvYWQgRGF0YQpXZSdsbCBzdGFydCBieSBsb2FkaW5nIHRoZSBncm9jZXJ5IHN0b3JlIGRhdGEgZnJvbSBvdXIgYGRhdGFgIGZvbGRlci4gCgpgYGB7ciwgbG9hZC1kYXRhfQojIEZvb2QgUmV0YWlsIGluIFN0LiBMb3Vpcwpncm9jZXJ5IDwtIHN0X3JlYWQoaGVyZSgiZGF0YSIsICJTVExfRk9PRF9Hcm9jZXJ5Lmdlb2pzb24iKSkgCmBgYAoKIyMgTWFwIEdyb2NlcnkgU3RvcmVzCldlJ3JlIGdvaW5nIHRvIG1hcCBvdXIgZ3JvY2VyeSBzdG9yZSBkYXRhIHdpdGggYSBjdXN0b20gcHJvdmlkZWQgYmFzZW1hcCwgYW5kIHBvcHVwcy4KCmBgYHtyLCBtYXAtc3RvcmVzfQpsZWFmbGV0KGRhdGEgPSBncm9jZXJ5KSAlPiUKICBhZGRQcm92aWRlclRpbGVzKHByb3ZpZGVycyRDYXJ0b0RCLlBvc2l0cm9uKSAlPiUKICBhZGRNYXJrZXJzKHBvcHVwID0gfnRpdGxlKQpgYGAKCg==</div>
 
 
 
