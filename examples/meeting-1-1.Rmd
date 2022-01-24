@@ -1,5 +1,5 @@
 ---
-title: "Meeting-01 Meeting Notebook"
+title: "Meeting-1-1 Notebook"
 author: "Christopher Prener, Ph.D."
 date: '(`r format(Sys.time(), "%B %d, %Y")`)'
 output: 
@@ -9,7 +9,7 @@ always_allow_html: yes
 ---
 
 ## Introduction
-This notebook provides a walk-through of the example code used in class.
+This notebook provides a walk-through of the example code used in our first class meeting.
 
 ## Dependencies
 This notebook requires the following packages:

@@ -1,5 +1,5 @@
 ---
-title: "Lab-01 Replication File"
+title: "Lab-1-1 Replication File"
 author: "Christopher Prener, Ph.D."
 date: '(`r format(Sys.time(), "%B %d, %Y")`)'
 output: 

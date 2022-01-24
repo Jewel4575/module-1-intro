@@ -1,7 +1,7 @@
-Lab-01 Replication File
+Lab-1-1 Replication File
 ================
 Christopher Prener, Ph.D.
-(February 04, 2021)
+(January 24, 2022)
 
 ## Introduction
 
@@ -26,23 +26,18 @@ library(readr)        # csv tools
 
 # mapping packages
 library(mapview)      # preview spatial data
-```
-
-    ## GDAL version >= 3.1.0 | setting mapviewOptions(fgb = TRUE)
-
-``` r
 library(leaflet)      # interactive maps
 library(sf)           # spatial tools
 ```
 
-    ## Linking to GEOS 3.8.1, GDAL 3.1.4, PROJ 6.3.1
+    ## Linking to GEOS 3.8.1, GDAL 3.2.1, PROJ 7.2.1; sf_use_s2() is TRUE
 
 ``` r
 # other packages
 library(here)         # file path management
 ```
 
-    ## here() starts at /Users/chris/GitHub/slu-soc5650/module-1-intro/assignments/lab-01-replication
+    ## here() starts at /Users/prenercg/GitHub/slu-soc5650/meetings/module-1-intro/assignments/lab-1-1-replication
 
 ## Load Data
 
@@ -53,12 +48,14 @@ We’ll start by loading the grocery store data from our `data` folder.
 grocery <- st_read(here("data", "STL_FOOD_Grocery.geojson")) 
 ```
 
-    ## Reading layer `grocery' from data source `/Users/chris/GitHub/slu-soc5650/module-1-intro/assignments/lab-01-replication/data/STL_FOOD_Grocery.geojson' using driver `GeoJSON'
+    ## Reading layer `grocery' from data source 
+    ##   `/Users/prenercg/GitHub/slu-soc5650/meetings/module-1-intro/assignments/lab-1-1-replication/data/STL_FOOD_Grocery.geojson' 
+    ##   using driver `GeoJSON'
     ## Simple feature collection with 685 features and 5 fields
-    ## geometry type:  POINT
-    ## dimension:      XY
-    ## bbox:           xmin: -90.69589 ymin: 38.46747 xmax: -90.18662 ymax: 38.82457
-    ## geographic CRS: WGS 84
+    ## Geometry type: POINT
+    ## Dimension:     XY
+    ## Bounding box:  xmin: -90.69589 ymin: 38.46747 xmax: -90.18662 ymax: 38.82457
+    ## Geodetic CRS:  WGS 84
 
 ## Map Grocery Stores
 
@@ -71,4 +68,4 @@ leaflet(data = grocery) %>%
   addMarkers(popup = ~title)
 ```
 
-![](lab-01-replication_files/figure-gfm/map-stores-1.png)<!-- -->
+![](lab-1-1-replication_files/figure-gfm/map-stores-1.png)<!-- -->
